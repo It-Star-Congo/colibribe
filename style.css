@@ -1,0 +1,335 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f8ff;
+  color: #333;
+}
+
+/* === NAVBAR MODERNE === */
+header {
+  background: linear-gradient(to right, #004a99, #ff9f00);
+  padding: 0.8rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  height: 50px;
+  border-radius: 25%;
+}
+
+.brand-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #004a99;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  transition: 0.3s;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  #nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #ff9f00;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  #nav-links.open {
+    max-height: 300px;
+  }
+
+  #nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+}
+
+
+.hero {
+  background: linear-gradient(to right, #004a99, #ff9f00);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5em;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+.cta-button {
+  background-color: #004a99;
+  color: white;
+  
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+.cta-button:hover{
+    background-color: white;
+    color: #ff9f00;
+}
+
+.services, .destinations, .contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.service {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  max-width: 300px;
+  flex: 1;
+}
+
+.logo{
+    border-radius: 25%;
+}
+
+.services h2 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 30px;
+}
+
+.card {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 15px;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-top: 1px solid #004a99;
+  border-bottom: 5px solid #ff9f00;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  border: 5px solid #ff9f00;
+}
+
+.card:hover p{
+  color: #ff9f00;
+}
+
+.card:hover h3{
+  color: #004a99;
+}
+
+.card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #004a99;
+}
+
+.card h3 {
+  color: #ff9f00;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #444;
+}
+
+/*=======================  DESTINATIONS =================*/
+
+.destinations{
+    /*background-color: #ff9d0095;*/
+    color: #444;
+}
+
+/*=======================  FOOTER =======================*/
+
+footer {
+  /*background-color: #ff9f00;*/
+  background: linear-gradient(to right, #004a99, #ff9f00);
+  color: #444;
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-container > div {
+  flex: 1 1 300px;
+}
+
+
+footer h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.dce{
+    color: white;
+}
+
+.dce2{
+    color: #ff9f00;
+}
+
+.dce3{
+    color: #004a99;
+}
+
+footer p, footer a {
+  font-size: 0.95rem;
+  color: white;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #004a99;;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: white;
+  color: #ff9f00;
+}
+
+.contact-map iframe {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+}
+
+.form-message {
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background-color: #f4f8ff;
+}

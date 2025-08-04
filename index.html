@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colibri Fret - La solution de transport efficace</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.jpg">
+</head>
+<body>
+  <header>
+    <div class="navbar">
+        <div class="logo-section">
+        <img src="logo.jpg" alt="Colibri Logo" class="logo" />
+        <span class="brand-name">Colibri.be</span>
+        </div>
+
+        <nav id="nav-links">
+        <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        </nav>
+
+        <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        </div>
+    </div>
+    </header>
+
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Colibri.be</h1>
+      <p>La solution de transport efficace !</p>
+      <a href="#contact" class="cta-button">Demandez un devis</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Nos Services</h2>
+    <div class="service-cards">
+
+        <div class="card">
+        <div class="icon">✈️</div>
+        <h3>Fret Aérien</h3>
+        <p>Livraison rapide et sécurisée par avion vers l'Afrique et à l'international.</p>
+        </div>
+
+        <div class="card">
+        <div class="icon">🚢</div>
+        <h3>Fret Maritime</h3>
+        <p>Groupage ou conteneur complet, expédition économique par voie maritime.</p>
+        </div>
+
+        <div class="card">
+        <div class="icon">🚚</div>
+        <h3>Fret Express</h3>
+        <p>Service rapide pour vos colis en porte à porte en Belgique et en RDC.</p>
+        </div>
+
+        <div class="card">
+        <div class="icon">🌍</div>
+        <h3>Import / Export</h3>
+        <p>Nous assurons vos opérations d’import-export vers l’Europe, l’Afrique, l’Asie et l’Amérique.</p>
+        </div>
+
+        <div class="card">
+        <div class="icon">📦</div>
+        <h3>Groupage</h3>
+        <p>Regroupez vos colis avec d'autres expéditions pour économiser sur les frais de transport.</p>
+        </div>
+
+        <div class="card">
+        <div class="icon">🚗</div>
+        <h3>Expédition de véhicules</h3>
+        <p>Transport sécurisé de voitures et motos par bateau ou avion vers l'Afrique.</p>
+        </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="destinations" class="destinations">
+    <h2>Destinations principales</h2>
+    <p>📍 Bruxelles – Kinshasa – Lubumbashi – Goma – Mbuji Mayi – Matadi – Muanda – et plus...</p>
+    <p>🌍 Autres destinations : Dubaï 🇦🇪, Chine 🇨🇳, France 🇫🇷, etc.</p>
+  </section>
+
+
+
+
+    <footer id="contact">
+  <div class="footer-container">
+    <div class="contact-info">
+      <h2 class="dce2">Contactez-nous</h2>
+      <p>📍 Rue Vanderstichelen 152, 1080 Bruxelles (Molenbeek)</p>
+      <p>📞 Tél : +32 (0)2 304 36 83</p>
+      <p>📱 GSM : +32 (0)465 55 51 74</p>
+      <p>📧 <a href="mailto:Colibribecontact@gmail.com">colibribecontact@gmail.com</a></p>
+      <p>🌐 <a href="https://www.colibri.be">www.colibri.be</a></p>
+      <p>🕒 Lundi – Samedi : 10h – 19h</p>
+    </div>
+
+    <div class="contact-form">
+      <h2 class="dce">Envoyez-nous un message</h2>
+      <form id="contactForm">
+        <input type="text" id="name" name="name" placeholder="Votre nom" required />
+        <input type="text" id="contact" name="contact" placeholder="Votre numéro ou email" required />
+        <input type="text" id="subject" name="subject" placeholder="Sujet" required />
+        <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+
+      <div id="form-message" class="form-message"></div>
+
+    </div>
+
+    <div class="contact-map">
+      <h2 class="dce3">Nous trouver</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.472859977784!2d4.328319276768391!3d50.86022525972525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c37773bba3e9%3A0x845add9a2edb3644!2sRue%20Vanderschrieken%20152%2C%201080%20Molenbeek-Saint-Jean!5e0!3m2!1sfr!2sbe!4v1690000000000"
+        width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Colibri.be – Tous droits réservés.</p>
+  </div>
+</footer>
+
+ <script src="script.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  
+  <script>
+    (function () {
+      emailjs.init("0itHGT0RE2JJZzn8U"); // Remplace par ta Public Key (API)
+    })();
+  </script>
+
+</body>
+</html>
