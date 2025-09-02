@@ -102,6 +102,31 @@ nav ul li a.active::after {
   margin: 3px 0;
 }
 
+/* ----- Responsive navbar ----- */
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* caché par défaut */
+    flex-direction: column;
+    gap: 15px;
+    background: #002147;
+    position: absolute;
+    top: 100%; /* juste sous la navbar */
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+
+  nav ul.show {
+    display: flex; /* affiché quand toggle actif */
+  }
+
+  .menu-toggle {
+    display: flex; /* afficher hamburger */
+  }
+}
+
 /* -------------------- Hero -------------------- */
 .hero {
   background: url("cargo.jpg") no-repeat center center/cover;
