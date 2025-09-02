@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Colibri Fret - La solution de transport efficace</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style2.css">
   <link rel="icon" href="logo.jpg">
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 </head>
 <body>
   <header>
@@ -33,105 +36,272 @@
 
 
   <section class="hero">
-    <div class="hero-text">
-      <h1>Colibri.be</h1>
-      <p>La solution de transport efficace !</p>
-      <a href="#contact" class="cta-button">Demandez un devis</a>
+  <div class="swiper hero-slider">
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide">
+        <img src="img/Fond1.jpeg" alt="Cargo" class="slide-img" />
+        <div class="overlay"></div>
+        <div class="hero-text">
+          <h1>Colibri.be</h1>
+          <p>Votre partenaire logistique de confiance</p>
+          <a href="#contact" class="cta-button">Demandez un devis</a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide">
+        <img src="img/Fond2.jpeg" alt="Avion" class="slide-img" />
+        <div class="overlay"></div>
+        <div class="hero-text">
+          <h1>Fret Aérien</h1>
+          <p>Livraison rapide et sécurisée par avion</p>
+          <a href="#services" class="cta-button">Voir nos services</a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="swiper-slide">
+        <img src="img/Fond3.jpeg" alt="Bateau" class="slide-img" />
+        <div class="overlay"></div>
+        <div class="hero-text">
+          <h1>Fret Maritime</h1>
+          <p>Des solutions économiques vers l’Afrique et le monde</p>
+          <a href="#services" class="cta-button">Découvrir</a>
+        </div>
+      </div>
+
     </div>
-  </section>
+
+    <!-- Pagination + flèches -->
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+
 
   <section id="services" class="services">
-    <h2>Nos Services</h2>
-    <div class="service-cards">
+  <h2>Nos Services</h2>
 
-        <div class="card">
-        <div class="icon">✈️</div>
+  <div class="service-cards">
+    <article class="card card--aerien" data-img="img/services/aerien.png" aria-label="Fret Aérien">
+      <div class="card__overlay"></div>
+      <div class="card__content">
         <h3>Fret Aérien</h3>
         <p>Livraison rapide et sécurisée par avion vers l'Afrique et à l'international.</p>
-        </div>
+      </div>
+    </article>
 
-        <div class="card">
-        <div class="icon">🚢</div>
+    <article class="card card--maritime" data-img="img/services/maritime.png" aria-label="Fret Maritime">
+      <div class="card__overlay"></div>
+      <div class="card__content">
         <h3>Fret Maritime</h3>
         <p>Groupage ou conteneur complet, expédition économique par voie maritime.</p>
-        </div>
+      </div>
+    </article>
 
-        <div class="card">
-        <div class="icon">🚚</div>
+    <article class="card card--express" data-img="img/services/express.png" aria-label="Fret Express">
+      <div class="card__overlay"></div>
+      <div class="card__content">
         <h3>Fret Express</h3>
         <p>Service rapide pour vos colis en porte à porte en Belgique et en RDC.</p>
-        </div>
+      </div>
+    </article>
 
-        <div class="card">
-        <div class="icon">🌍</div>
+    <article class="card card--import" data-img="img/services/impexp.png" aria-label="Import / Export">
+      <div class="card__overlay"></div>
+      <div class="card__content">
         <h3>Import / Export</h3>
         <p>Nous assurons vos opérations d’import-export vers l’Europe, l’Afrique, l’Asie et l’Amérique.</p>
-        </div>
+      </div>
+    </article> 
 
-        <div class="card">
-        <div class="icon">📦</div>
+    <article class="card card--groupage" data-img="img/services/groupage.png" aria-label="Groupage">
+      <div class="card__overlay"></div>
+      <div class="card__content">
         <h3>Groupage</h3>
-        <p>Regroupez vos colis avec d'autres expéditions pour économiser sur les frais de transport.</p>
-        </div>
+        <p>Regroupez vos colis avec d'autres expéditions pour économiser sur les frais.</p>
+      </div>
+    </article>
 
-        <div class="card">
-        <div class="icon">🚗</div>
+    <article class="card card--vehicules" data-img="img/services/car.png" aria-label="Expédition de véhicules">
+      <div class="card__overlay"></div>
+      <div class="card__content">
         <h3>Expédition de véhicules</h3>
         <p>Transport sécurisé de voitures et motos par bateau ou avion vers l'Afrique.</p>
-        </div>
-
-    </div>
-  </section>
-
-
-
-  <section id="destinations" class="destinations">
-    <h2>Destinations principales</h2>
-    <p>📍 Bruxelles – Kinshasa – Lubumbashi – Goma – Mbuji Mayi – Matadi – Muanda – et plus...</p>
-    <p>🌍 Autres destinations : Dubaï 🇦🇪, Chine 🇨🇳, France 🇫🇷, etc.</p>
-  </section>
+      </div>
+    </article>
+  </div>
+</section>
 
 
 
 
-    <footer id="contact">
-  <div class="footer-container">
-    <div class="contact-info">
-      <h2 class="dce2">Contactez-nous</h2>
-      <p>📍 Rue Vanderstichelen 152, 1080 Bruxelles (Molenbeek)</p>
-      <p>📞 Tél : +32 (0)2 304 36 83</p>
-      <p>📱 GSM : +32 (0)465 55 51 74</p>
-      <p>📧 <a href="mailto:Colibribecontact@gmail.com">colibribecontact@gmail.com</a></p>
-      <p>🌐 <a href="https://www.colibri.be">www.colibri.be</a></p>
-      <p>🕒 Lundi – Samedi : 10h – 19h</p>
-    </div>
+ <section id="destinations" class="destinations" aria-labelledby="destinations-title">
+  <div class="destinations__inner">
+    <h2 id="destinations-title" class="destinations__title">
+      Destinations principales
+      <span class="destinations__underline" aria-hidden="true"></span>
+    </h2>
 
-    <div class="contact-form">
-      <h2 class="dce">Envoyez-nous un message</h2>
-      <form id="contactForm">
-        <input type="text" id="name" name="name" placeholder="Votre nom" required />
-        <input type="text" id="contact" name="contact" placeholder="Votre numéro ou email" required />
-        <input type="text" id="subject" name="subject" placeholder="Sujet" required />
-        <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
-        <button type="submit">Envoyer</button>
-      </form>
+    <p class="destinations__intro">
+      Départs depuis Bruxelles vers nos hubs en RDC et au-delà.
+    </p>
 
-      <div id="form-message" class="form-message"></div>
+    <!-- Hubs principaux -->
+    <ul class="destinations__grid" role="list">
+      <li class="destinations__pill">🇧🇪 Bruxelles</li>
+      <li class="destinations__pill">🇨🇩 Kinshasa</li>
+      <li class="destinations__pill">🇨🇩 Lubumbashi</li>
+      <li class="destinations__pill">🇨🇩 Goma</li>
+      <li class="destinations__pill">🇨🇩 Mbuji-Mayi</li>
+      <li class="destinations__pill">🇨🇩 Matadi</li>
+      <li class="destinations__pill">🇨🇩 Muanda</li>
+      <li class="destinations__pill">🇨🇩 Bandundu</li>
+      <li class="destinations__pill">🇨🇬 Pointe-Noire</li>
+    </ul>
 
-    </div>
-
-    <div class="contact-map">
-      <h2 class="dce3">Nous trouver</h2>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.472859977784!2d4.328319276768391!3d50.86022525972525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c37773bba3e9%3A0x845add9a2edb3644!2sRue%20Vanderschrieken%20152%2C%201080%20Molenbeek-Saint-Jean!5e0!3m2!1sfr!2sbe!4v1690000000000"
-        width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <!-- Autres destinations (défilable) -->
+    <div class="destinations__more">
+      <span class="destinations__more-label">Autres destinations :</span>
+      <div class="destinations__scroller" tabindex="0" aria-label="Autres destinations (défilement horizontal)">
+        <span class="chip">🇦🇪 Dubaï</span>
+        <span class="chip">🇨🇳 Chine</span>
+        <span class="chip">🇫🇷 France</span>
+        <span class="chip">🇩🇪 Allemagne</span>
+        <span class="chip">🇳🇱 Pays-Bas</span>
+        <span class="chip">🇪🇸 Espagne</span>
+        <span class="chip">🇺🇸 États-Unis</span>
+        <span class="chip">🇬🇧 Royaume-Uni</span>
+        <span class="chip">🇹🇷 Turquie</span>
+        <span class="chip">🇮🇳 Inde</span>
+      </div>
     </div>
   </div>
+</section>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 Colibri.be – Tous droits réservés.</p>
+  <section id="partenaires" class="partenaires">
+  <div class="partners-container">
+    <div class="partners-track">
+      <img src="img/partenaires/airport.png" alt="Partenaire 1">
+      <img src="img/partenaires/avion.png" alt="Partenaire 2">
+      <img src="img/partenaires/cargo.png" alt="Partenaire 3">
+      <img src="img/partenaires/cargo2.png" alt="Partenaire 4">
+      <img src="img/partenaires/itstar.png" alt="Partenaire 5">
+      <img src="img/partenaires/kin.png" alt="Partenaire 6">
+      <img src="img/partenaires/aurore.jpeg" alt="Partenaire 7">
+      <img src="img/partenaires/fleurannie.jpg" alt="Partenaire 8">
+
+      <!-- Clone des logos pour la boucle infinie -->
+      <img src="img/partenaires/airport.png" alt="Partenaire 1">
+      <img src="img/partenaires/avion.png" alt="Partenaire 2">
+      <img src="img/partenaires/cargo.png" alt="Partenaire 3">
+      <img src="img/partenaires/cargo2.png" alt="Partenaire 4">
+      <img src="img/partenaires/itstar.png" alt="Partenaire 5">
+      <img src="img/partenaires/kin.png" alt="Partenaire 6">
+      <img src="img/partenaires/aurore.jpeg" alt="Partenaire 7">
+      <img src="img/partenaires/fleurannie.jpg" alt="Partenaire 8">
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<footer id="contact" class="footer">
+  <div class="footer__inner">
+    <!-- Bloc coordonnées -->
+    <section class="footer__col">
+      <h2 class="footer__title">Contactez-nous</h2>
+      <ul class="contact-list" role="list">
+        <li class="contact-item">
+          <span class="icon" aria-hidden="true">
+            <!-- Location -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
+          </span>
+          <span>Rue Vanderstichelen 152, 1080 Bruxelles</span>
+        </li>
+        <li class="contact-item">
+          <span class="icon" aria-hidden="true">
+            <!-- Phone -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M6.6 10.8a15.4 15.4 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.7 11.7 0 0 0 3.7.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 8a1 1 0 0 1 1-1h3.4a1 1 0 0 1 1 1 11.7 11.7 0 0 0 .6 3.7 1 1 0 0 1-.25 1Z"/></svg>
+          </span>
+          <span>Tél : +32 (0)2 304 36 83</span>
+        </li>
+        <li class="contact-item">
+          <span class="icon" aria-hidden="true">
+            <!-- Mobile -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm0 3v14h10V5H7Zm5 13a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5Z"/></svg>
+          </span>
+          <span>GSM : +32 (0)465 55 51 74</span>
+        </li>
+        <li class="contact-item">
+          <span class="icon" aria-hidden="true">
+            <!-- Mail -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm2 6.2-10 5.8L0 10.2V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.8Z"/></svg>
+          </span>
+          <a href="mailto:colibribecontact@gmail.com" class="link">colibribecontact@gmail.com</a>
+        </li>
+        <li class="contact-item">
+          <span class="icon" aria-hidden="true">
+            <!-- Globe -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2Zm7.9 9h-3.4a15.7 15.7 0 0 0-1.2-6 8 8 0 0 1 4.6 6ZM12 4c.9 1.4 1.8 3.7 2 7H10c.2-3.3 1.1-5.6 2-7ZM4.1 11a8 8 0 0 1 4.6-6 15.7 15.7 0 0 0-1.2 6H4.1ZM8 13c.2 3.3 1.1 5.6 2 7a8 8 0 0 1-6-7h4Zm4 7c.9-1.4 1.8-3.7 2-7h-4c.2 3.3 1.1 5.6 2 7Zm2.7-.9a15.7 15.7 0 0 0 1.2-6h3.4a8 8 0 0 1-4.6 6Z"/></svg>
+          </span>
+          <a href="https://www.colibri.be" target="_blank" rel="noopener" class="link">www.colibri.be</a>
+        </li>
+        <li class="contact-item">
+          <span class="icon" aria-hidden="true">
+            <!-- Clock -->
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm1 5h-2v6l5 3 .9-1.5-3.9-2.3V7Z"/></svg>
+          </span>
+          <span>Lundi – Samedi : 10h – 19h</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Bloc formulaire -->
+    <section class="footer__col">
+      <h2 class="footer__title">Envoyez-nous un message</h2>
+      <form id="contactForm" class="contact-form" novalidate>
+        <label class="sr-only" for="name">Votre nom</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required />
+
+        <label class="sr-only" for="contact">Votre numéro ou email</label>
+        <input type="text" id="contact" name="contact" placeholder="Votre numéro ou email" required />
+
+        <label class="sr-only" for="subject">Sujet</label>
+        <input type="text" id="subject" name="subject" placeholder="Sujet" required />
+
+        <label class="sr-only" for="message">Votre message</label>
+        <textarea id="message" name="message" placeholder="Votre message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Envoyer</button>
+        <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- Bloc carte -->
+    <section class="footer__col">
+      <h2 class="footer__title">Nous trouver</h2>
+      <div class="map-wrap">
+        <iframe
+          title="Localisation – Colibri"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.472859977784!2d4.328319276768391!3d50.86022525972525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c37773bba3e9%3A0x845add9a2edb3644!2sRue%20Vanderschrieken%20152%2C%201080%20Molenbeek-Saint-Jean!5e0!3m2!1sfr!2sbe!4v1690000000000"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </div>
+
+  <div class="footer__bottom">
+    <p>&copy; 2025 Colibri.be — Tous droits réservés.</p>
   </div>
 </footer>
+
 
  <script src="script.js"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -141,6 +311,8 @@
       emailjs.init("0itHGT0RE2JJZzn8U"); // Remplace par ta Public Key (API)
     })();
   </script>
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </body>
 </html>
