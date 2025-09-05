@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colibri Logistique — Mission</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="icon" href="img/fwdcoilibrilogo/COLIBRI LOGO.png">
+
+  <!-- ===== Styles spécifiques Mission ===== -->
+  <style>
+    :root{
+      --curve: 28px;            /* même rayon que la navbar */
+      /* --header-h est déjà dans style2.css (82px) */
+    }
+
+    /* HERO (photo au-dessus) */
+    .page-hero{
+      background: url("img/Fond_about.jpeg") center/cover no-repeat;
+      position: relative;
+      margin-top: var(--header-h, 82px);
+      height: clamp(240px, 32vh, 420px);
+      overflow: hidden;
+      background:#0e1f39;       /* fallback si pas d'image */
+      z-index: 1;               /* sous le main */
+    }
+    .page-hero__img{
+      width:100%; height:100%;
+      object-fit:cover; display:block;
+      filter: saturate(1.05) contrast(1.02);
+      transform: scale(1.02);
+    }
+    .page-hero::after{
+      content:""; position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.35));
+      pointer-events:none;
+    }
+    .page-hero__caption{
+      position:absolute; left:16px; right:16px; bottom:16px;
+      z-index:2; color:#fff; font-weight:800; letter-spacing:.2px;
+      text-shadow:0 2px 10px rgba(0,0,0,.35);
+    }
+
+    /* MAIN qui recouvre le hero avec le même arrondi */
+    .mission-main{
+      position:relative; z-index:2;
+      margin-top: calc(-1 * var(--curve)); /* remonte sur la photo */
+      background:#fff;
+      border-radius: var(--curve) var(--curve) 0 0;
+      box-shadow: 0 -12px 28px rgba(0,0,0,.06);
+      padding-top: clamp(12px, 2vw, 24px);
+    }
+
+    /* Harmoniser l'arrondi de la navbar */
+    header{ border-radius: 0 0 var(--curve) var(--curve); }
+
+    /* Section Mission (reuse de ton style "about", peaufiné) */
+    .about{
+      padding: clamp(56px, 6vw, 90px) 20px;
+      background:
+        radial-gradient(1100px 500px at 12% -10%, rgba(255,204,0,0.06), transparent 45%),
+        radial-gradient(900px 450px at 88% 110%, rgba(255,204,0,0.05), transparent 55%),
+        #fff;
+      color:#002147;
+    }
+    .about__inner{ max-width:1100px; margin:0 auto; }
+    .about__header{ text-align:center; margin-bottom:20px; }
+    .about__title{
+      font-size: clamp(1.9rem, 1.2rem + 2.2vw, 2.6rem);
+      font-weight: 900; color:#0d2a4a; letter-spacing:.2px; margin:0;
+    }
+    .about__underline{
+      display:block; width:120px; height:4px; margin:12px auto 0;
+      background: linear-gradient(90deg, #ffcc00, #ffde5a);
+      border-radius:999px; box-shadow:0 0 24px rgba(255,204,0,.35);
+    }
+
+    .about__card{
+      margin: 26px auto 0;
+      padding: clamp(22px, 2.6vw, 32px);
+      background:#fff;
+      border:1px solid #eef0f4;
+      border-left:5px solid #ffcc00;
+      border-radius:16px;
+      box-shadow:0 14px 36px rgba(13,42,74,.06);
+      line-height:1.75; color:#233649; max-width:900px;
+      font-size: clamp(1rem, .96rem + .2vw, 1.06rem);
+    }
+    .about__card p{ margin:0 0 12px; }
+    .about__card p:first-child{
+      margin-bottom:6px; color:#0d2a4a; font-weight:800;
+      letter-spacing:.2px; text-transform:uppercase; font-size:.95rem; opacity:.9;
+    }
+
+    /* Liste “Pourquoi nous choisir ?” plus premium */
+    .about-list{
+      list-style:none; margin: 14px 0 0; padding:0;
+      display:grid; gap:12px;
+    }
+    .about-list li{
+      display: flex; grid-template-columns: 28px 1fr; align-items:flex-start;
+      gap:10px; padding:14px 14px;
+      background:#fff;
+      border:1px solid #eef0f4; border-radius:12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.04);
+    }
+    .about-list .icon{
+      display:inline-flex; align-items:center; justify-content:center;
+      width:28px; height:28px; border-radius:999px;
+      background:#fffbdf; color:#002147; border:1px solid #ffec8a;
+    }
+    .about-list strong{ color:#0d2a4a; }
+
+
+
+    @media (max-width:560px){
+      .page-hero{ height:220px; border-radius:0 0 22px 22px; }
+      .about__card{ padding:18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <div class="navbar">
+      <div class="logo-section">
+        <img src="img/fwdcoilibrilogo/COLIBRI LOGO.jpg" alt="Colibri Logo" class="logo" />
+      </div>
+
+      <nav id="nav-links">
+        <ul>
+          <li><a href="index.html#apropos">Accueil</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#destinations">Destinations</a></li>
+          <li class="has-submenu" aria-expanded="false">
+            <button class="nav-link with-caret" aria-expanded="false" aria-haspopup="true" aria-controls="submenu-about">
+              À propos
+              <svg class="caret" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M8.12 9.29 12 13.17l3.88-3.88 1.41 1.41L12 16l-5.29-5.29 1.41-1.41Z"/>
+              </svg>
+            </button>
+            <ul id="submenu-about" class="submenu" role="menu" aria-label="Sous-menu À propos">
+              <li role="none"><a role="menuitem" href="about.html" class="submenu-link">Présentation</a></li>
+              <li role="none"><a role="menuitem" href="mission.html" class="submenu-link">Mission</a></li>
+              <li role="none"><a role="menuitem" href="tarification.html" class="submenu-link">Tarification</a></li>
+            </ul>
+          </li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== HERO (photo au-dessus) ===== -->
+  <section class="page-hero" aria-label="Illustration mission Colibri">
+    <img class="page-hero__img" src="img/Fond_about.jpeg" alt="Colibri – mission et engagement">
+    <div class="page-hero__caption">Notre mission, votre sérénité logistique.</div>
+  </section>
+
+  <!-- ===== MAIN qui “plonge” sur la photo ===== -->
+  <main class="mission-main">
+    <section class="about" aria-labelledby="mission-title">
+      <div class="about__inner">
+        <div class="about__header">
+          <h1 id="mission-title" class="about__title">Notre mission</h1>
+          <span class="about__underline" aria-hidden="true"></span>
+        </div>
+
+        <article class="about__card" role="region" aria-label="Mission Colibri">
+          <p>Notre mission</p>
+          <p>
+            Faciliter les échanges entre l’Europe, l’Asie et l’Afrique en offrant un service de
+            logistique simple, transparent et efficace. Nous mettons l’accent sur la confiance, la
+            proximité et la rapidité, afin que vos marchandises arrivent toujours à bon port.
+          </p>
+
+          <p>Pourquoi nous choisir ?</p>
+          <ul class="about-list">
+            <li>
+              <span class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm-1.25-6.75 5.25-5.25-1.414-1.414L10.75 12.586 8.914 10.75 7.5 12.164l3.25 3.086z"/>
+                </svg>
+              </span>
+              <strong>Expertise :</strong> une équipe qui maîtrise le groupage, le dédouanement et la livraison jusqu’à Kinshasa.
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm-1.25-6.75 5.25-5.25-1.414-1.414L10.75 12.586 8.914 10.75 7.5 12.164l3.25 3.086z"/>
+                </svg>
+              </span>
+              <strong>Rapidité :</strong> un service agile, inspiré du colibri, pour des délais optimisés.
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm-1.25-6.75 5.25-5.25-1.414-1.414L10.75 12.586 8.914 10.75 7.5 12.164l3.25 3.086z"/>
+                </svg>
+              </span>
+              <strong>Fiabilité :</strong> chaque client est accompagné du départ jusqu’à l’arrivée.
+            </li>
+            <li>
+              <span class="icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm-1.25-6.75 5.25-5.25-1.414-1.414L10.75 12.586 8.914 10.75 7.5 12.164l3.25 3.086z"/>
+                </svg>
+              </span>
+              <strong>Flexibilité :</strong> solutions pour entreprises et particuliers, adaptées à vos besoins spécifiques.
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (identique) -->
+  <footer id="contact" class="footer">
+    <div class="footer__inner">
+      <section class="footer__col">
+        <h2 class="footer__title">Contact rapide</h2>
+        <form id="contactForm" class="contact-form" novalidate>
+          <label class="sr-only" for="f_name">Nom</label>
+          <input type="text" id="f_name" name="name" placeholder="Votre nom" required />
+          <label class="sr-only" for="f_email">Email</label>
+          <input type="email" id="f_email" name="email" placeholder="Votre email" required />
+          <label class="sr-only" for="f_phone">Téléphone</label>
+          <input type="tel" id="f_phone" name="phone" placeholder="Votre téléphone" required />
+          <label class="sr-only" for="f_service">Type de service souhaité</label>
+          <select id="f_service" name="service" required>
+            <option value="" selected disabled>Type de service souhaité</option>
+            <option>Fret aérien</option><option>Fret maritime</option><option>Groupage</option>
+            <option>Express</option><option>Import / Export</option><option>Expédition de véhicules</option>
+          </select>
+          <button type="submit" class="btn">Envoyer</button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="footer__col">
+        <h2 class="footer__title">Coordonnées Colibri</h2>
+        <ul class="contact-list" role="list">
+          <li class="contact-item">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
+            </span>
+            <span>Rue Vanderstichelen 152, 1080 Bruxelles</span>
+          </li>
+          <li class="contact-item">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20 4H4a2 2 0 0 0-2 2v1.2l10 5.8 10-5.8V6a2 2 0 0 0-2-2Zm2 6.2-10 5.8L0 10.2V18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-7.8Z"/></svg>
+            </span>
+            <a href="mailto:colibribecontact@gmail.com" class="link">colibribecontact@gmail.com</a>
+          </li>
+          <li class="contact-item">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M19.1 17.2c-.3-.2-.7-.3-1 .1l-.5.6c-.2.2-.4.3-.7.2-1.6-.6-3-1.7-3.9-3.1-.2-.2-.2-.5 0-.7l.5-.6c.2-.3.2-.7 0-1l-.8-1.8c-.2-.5-.8-.6-1.2-.4-1 .6-1.6 1.7-1.5 2.9.1 1.9 1.1 3.8 2.7 5.4 1.7 1.6 3.6 2.6 5.5 2.7 1.1.1 2.2-.5 2.8-1.5.3-.4.1-1-.4-1.2l-1.5-.6z"/><path d="M27 16a11 11 0 1 0-20.5 5.5L5 27l5.7-1.5A11 11 0 0 0 27 16zm-20 0a9 9 0 1 1 17.5 4.5l-.2.4.3 2.7-2.7-.7-.4.2A9 9 0 0 1 7 16z"/></svg>
+            </span>
+            <a href="https://wa.me/32465555174" target="_blank" rel="noopener" class="link">WhatsApp Business : +32 465 55 51 74</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer__col">
+        <h2 class="footer__title">Suivez-nous</h2>
+        <div class="socials">
+          <a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm5.75-.75a1 1 0 1 1 0 2 1 1 0 0 1 0-2Z"/>
+            </svg>
+            <span>@colibri.logistique</span>
+          </a>
+          <a class="social" href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+              <path d="M13 22v-8h3l1-4h-4V8c0-1.1.9-2 2-2h2V2h-3a5 5 0 0 0-5 5v3H6v4h3v8h4Z"/>
+            </svg>
+            <span>/colibri.logistique</span>
+          </a>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            title="Localisation – Colibri"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.472859977784!2d4.328319276768391!3d50.86022525972525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c37773bba3e9%3A0x845add9a2edb3644!2sRue%20Vanderstichelen%20152%2C%201080%20Bruxelles!5e0!3m2!1sfr!2sbe!4v1690000000000"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+      </section>
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; 2025 Colibri.be — Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Burger
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector("nav ul");
+    menuToggle?.addEventListener("click", () => navLinks.classList.toggle("show"));
+
+    // Submenu "À propos" (accessibilité simple)
+    const subWrapper = document.querySelector(".has-submenu");
+    const subBtn = document.querySelector(".with-caret");
+    subBtn?.addEventListener("click", () => {
+      const expanded = subWrapper.getAttribute("aria-expanded") === "true";
+      subWrapper.setAttribute("aria-expanded", String(!expanded));
+      subBtn.setAttribute("aria-expanded", String(!expanded));
+    });
+    document.addEventListener("click", (e) => {
+      if (!subWrapper?.contains(e.target)) {
+        subWrapper?.setAttribute("aria-expanded", "false");
+        subBtn?.setAttribute("aria-expanded", "false");
+      }
+    });
+  </script>
+</body>
+</html>

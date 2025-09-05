@@ -18,9 +18,24 @@
 
         <nav id="nav-links">
         <ul>
-            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#apropos">Accueil</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#destinations">Destinations</a></li>
+            <li class="has-submenu">
+              <button class="nav-link with-caret" aria-expanded="false" aria-haspopup="true" aria-controls="submenu-about">
+                À propos
+                <svg class="caret" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                  <path d="M8.12 9.29 12 13.17l3.88-3.88 1.41 1.41L12 16l-5.29-5.29 1.41-1.41Z"/>
+                </svg>
+              </button>
+
+              <ul id="submenu-about" class="submenu" role="menu" aria-label="Sous-menu À propos">
+                <li role="none"><a role="menuitem" href="about.html"     class="submenu-link">Présentation</a></li>
+                <li role="none"><a role="menuitem" href="mission.html"   class="submenu-link">Mission</a></li>
+                <li role="none"><a role="menuitem" href="tarification.html" class="submenu-link">Tarification</a></li>
+              </ul>
+            </li>
+
             <li><a href="#contact">Contact</a></li>
         </ul>
         </nav>
@@ -40,72 +55,6 @@
     <h1>Colibri.be</h1>
     <p>Votre partenaire logistique de confiance</p>
     <a href="#contact" class="cta-button">Demandez un devis</a>
-  </div>
-</section>
-
-
-<section id="about" class="about" aria-labelledby="about-title">
-  <div class="about__inner">
-    <div class="about__header">
-      <h2 id="about-title" class="about__title">À propos</h2>
-      <span class="about__underline" aria-hidden="true"></span>
-    </div>
-
-    <article class="about__card" role="region" aria-label="Section À propos">
-      <p> Présentation</p>
-      <p>
-        Colibri Logistique est une société spécialisée dans le transport et la logistique
-        internationale, avec un focus particulier sur les corridors stratégiques Belgique –
-        Kinshasa, Chine – Kinshasa et Dubaï – Kinshasa.
-        Notre mission est d’offrir des solutions rapides, fiables et accessibles, adaptées aussi
-        bien aux entreprises (B2B) qu’aux particuliers (B2C).
-      </p>
-
-      <p> Notre mission</p>
-      <p>
-        Faciliter les échanges entre l’Europe, l’Asie et l’Afrique en offrant un service de
-        logistique simple, transparent et efficace. Nous mettons l’accent sur la confiance, la
-        proximité et la rapidité, afin que vos marchandises arrivent toujours à bon port.
-      </p>
-
-      <p> Pourquoi nous choisir ?</p>
-<ul class="about-list">
-  <li>
-    <span class="icon">
-      <!-- Main OK pro / check dans un cercle -->
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm-1.25-6.75 5.25-5.25-1.414-1.414L10.75 12.586 8.914 10.75 7.5 12.164l3.25 3.086z"/>
-      </svg>
-    </span>
-    <strong>Expertise :</strong> une équipe qui maîtrise le groupage, le dédouanement et la livraison jusqu’à Kinshasa.
-  </li>
-  <li>
-    <span class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm-1.25-6.75 5.25-5.25-1.414-1.414L10.75 12.586 8.914 10.75 7.5 12.164l3.25 3.086z"/>
-      </svg>
-    </span>
-    <strong>Rapidité :</strong> un service agile, inspiré du colibri, pour des délais optimisés.
-  </li>
-  <li>
-    <span class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm-1.25-6.75 5.25-5.25-1.414-1.414L10.75 12.586 8.914 10.75 7.5 12.164l3.25 3.086z"/>
-      </svg>
-    </span>
-    <strong>Fiabilité :</strong> chaque client est accompagné du départ jusqu’à l’arrivée.
-  </li>
-  <li>
-    <span class="icon">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M12 22c5.421 0 10-4.579 10-10S17.421 2 12 2 2 6.579 2 12s4.579 10 10 10zm-1.25-6.75 5.25-5.25-1.414-1.414L10.75 12.586 8.914 10.75 7.5 12.164l3.25 3.086z"/>
-      </svg>
-    </span>
-    <strong>Flexibilité :</strong> solutions pour entreprises et particuliers, adaptées à vos besoins spécifiques.
-  </li>
-</ul>
-
-    </article>
   </div>
 </section>
 
